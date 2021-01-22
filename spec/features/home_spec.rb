@@ -14,4 +14,17 @@ feature 'Home page' do
     expect(page).to have_content("When's your birthday?")
   end
 
+  scenario 'user can enter name' do
+    fill_in('name', with: 'Hamish')
+  end
+
+  scenario 'user can enter the day' do
+    fill_in('day', with: '4')
+  end
+
+  scenario 'user can enter the month' do
+    select('April', from: 'month')
+    expect(page).to have_select('month', selected: 'April')
+  end
+
 end

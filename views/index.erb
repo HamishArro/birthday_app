@@ -1,5 +1,25 @@
 <h1>Hello there!</h1>
 
-<h5>What's your name?</h5>
-
-<h5>When's your birthday?</h5>
+<form action='/birthday' method='post'>
+  <h5>What's your name?</h5>
+  <input type=text name=name>
+  <h5>When's your birthday?</h5>
+  <label for="day">Day: </label>
+    <input type=text name=day maxlength="2" size="2">
+  <label for="month">Months: </label>
+  <select name="month" id="month">
+    <option value="1">January</option>
+    <option value="2">Febuary</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+  </select>
+  <br><input type=submit value=Go!>
+</form>
