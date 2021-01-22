@@ -8,7 +8,7 @@ class BirthdayApp < Sinatra::Base
   end
 
   get '/' do
-    "This is the start of my birhtday app"
+    erb(:index)
   end
 
 end
