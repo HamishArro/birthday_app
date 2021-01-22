@@ -3,6 +3,7 @@ require 'birthday'
 describe Birthday do
 
   subject {described_class.new(Time.new.day, Time.new.month)}
+  let(:not_birthday) {described_class.new(Time.new.day - 1, Time.new.month)}
 
   context 'when created' do
 
@@ -23,8 +24,15 @@ describe Birthday do
     end
 
     it 'checks the date and returns false' do
-      not_birthday = described_class.new(Time.new.day + 1, Time.new.month + 1)
       expect(not_birthday.check_birthday).to eq false
+    end
+
+  end
+
+  describe '#days_until_birthday' do
+
+    it 'returns the amount of days until birthday' do
+      expect(not_birthday.days_until_birthday).to eq 1
     end
 
   end

@@ -10,4 +10,8 @@ class Birthday
     Time.now.day == @day && Time.now.month == @month
   end
 
+  def days_until_birthday
+    
+  end
+
 end
